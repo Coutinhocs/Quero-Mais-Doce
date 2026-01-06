@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quero Mais Doce</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa: #e91e63;
+      --rosa-claro: #fde4ec;
+      --branco: #ffffff;
+      --cinza: #555;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--branco);
+      color: #333;
+    }
+    header {
+      background-color: var(--rosa);
+      padding: 120px 20px 80px;
+      text-align: center;
+      position: relative;
+    }
+    .faixa-titulo {
+      background-color: var(--branco);
+      display: inline-block;
+      padding: 20px 60px;
+      border-radius: 12px;
+    }
+    .faixa-titulo h1 {
+      color: var(--rosa);
+      font-size: 3rem;
+      margin: 0;
+    }
+    .faixa-titulo p {
+      color: #555;
+      margin-top: 8px;
+      font-size: 1.1rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: var(--branco);
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--rosa);
+      font-weight: 600;
+    }
+    nav a:hover { opacity: 0.7; }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      color: var(--rosa);
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .sobre img {
+      width: 100%;
+      border-radius: 16px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background-color: var(--branco);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card div {
+      padding: 20px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: var(--rosa);
+    }
+    .preco {
+      font-weight: bold;
+      color: #000;
+    }
+    .info {
+      background-color: var(--rosa-claro);
+      border-radius: 20px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    footer {
+      background-color: var(--rosa);
+      color: var(--branco);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    footer p { margin: 6px 0; }
+    @media (max-width: 800px) {
+      .sobre { grid-template-columns: 1fr; }
+      header h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header id="inicio">
+  <div class="faixa-titulo">
+    <div class="logo">
+      <svg width="70" height="70" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="48" fill="#e91e63"/>
+        <path d="M30 55c0-11 9-20 20-20s20 9 20 20" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="42" cy="45" r="4" fill="#fff"/>
+        <circle cx="58" cy="45" r="4" fill="#fff"/>
+      </svg>
+    </div>
+    <h1>Quero Mais Doce</h1>
+    <p>Doces & Bolos feitos para você querer sempre mais</p>
+  </div>
+</header>
+
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre Nós</a>
+  <a href="#lanches">Lanches</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+  <h2>Sobre Nós</h2>
+  <div class="sobre">
+    <p>
+      A <strong>Quero Mais Doce</strong> é especializada em doces artesanais e bolos feitos com carinho. Atendemos Sorocaba e região, com produtos de alta qualidade, ideais para festas ou para adoçar o dia.
+      <br><br>
+      <strong>Valor mínimo do pedido:</strong> R$13,00
+    </p>
+    <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f" alt="Doces" />
+  </div>
+</section>
+
+<section id="lanches">
+  <h2>Nossos Produtos</h2>
+  <div class="cards">
+    <a class="card" href="https://wa.me/5511956591646" target="_blank">
+      <img src="/mnt/data/f3d1ac51-b1fe-423b-9b80-283787030dcb.png" />
+      <div>
+        <h3>Vela Numeral</h3>
+        <p class="preco">R$ 5,00</p>
+      </div>
+    </a>
+    <a class="card" href="https://wa.me/5511956591646" target="_blank">
+      <img src="/mnt/data/b2cefa27-9a93-4ef7-896b-68927c0cf4c5.png" />
+      <div>
+        <h3>Bolo Inteiro</h3>
+        <p class="preco">R$ 89,90</p>
+      </div>
+    </a>
+    <a class="card" href="https://wa.me/5511956591646" target="_blank">
+      <img src="/mnt/data/4daa4dbb-71e9-455a-8ad3-c610f9617987.png" />
+      <div>
+        <h3>Geladinho Gourmet</h3>
+        <p class="preco">R$ 11,00</p>
+      </div>
+    </a>
+    <a class="card" href="https://wa.me/5511956591646" target="_blank">
+      <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e" />
+      <div>
+        <h3>Brigadeiro Gourmet</h3>
+        <p class="preco">R$ 13,00</p>
+      </div>
+    </a>
+  </div>
+    </div>
+    <div class="card">
+      <img src="/mnt/data/b2cefa27-9a93-4ef7-896b-68927c0cf4c5.png" />
+      <div>
+        <h3>Bolo Inteiro</h3>
+        <p class="preco">R$ 89,90</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="/mnt/data/4daa4dbb-71e9-455a-8ad3-c610f9617987.png" />
+      <div>
+        <h3>Geladinho Gourmet</h3>
+        <p class="preco">R$ 11,00</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e" />
+      <div>
+        <h3>Brigadeiro Gourmet</h3>
+        <p class="preco">R$ 13,00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <div class="info">
+    <div>
+      <strong>📍 Endereço</strong>
+      <p>Sorocaba, SP</p>
+    </div>
+    <div>
+      <strong>📞 Telefone</strong>
+      <p>(11) 95659-1646</p>
+    </div>
+    <div>
+      <strong>⏰ Horário</strong>
+      <p>
+        Segunda a Sexta: 08:30 às 17:30<br>
+        Sábado: 10:40 às 16:30<br>
+        Domingo: 10:40 às 16:30
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Quero Mais Doce</p>
+  <p>Doces & Bolos</p>
+</footer>
+
+</body>
+</html>
